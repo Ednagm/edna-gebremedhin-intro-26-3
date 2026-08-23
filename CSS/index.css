@@ -85,4 +85,5 @@ nav a:hover {
 }
 #Skills ul {
     display: flex;
+    flex-direction: column;
 }

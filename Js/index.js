@@ -1,8 +1,8 @@
-const footer = document.createElement("footer");
-document.body.append(footer);
-
 const today = new Date();
 const thisYear = today.getFullYear();
+
+const footer = document.createElement("footer");
+document.body.append(footer);
 
 const copyright = document.createElement("p");
 copyright.innerHTML = `© ${thisYear} Edna Gebremedhin`;
@@ -20,3 +20,4 @@ for (let i = 0; i < skills.length; i++) {
     skill.innerText = skills[i];
     skillsList.appendChild(skill);
 }
+
