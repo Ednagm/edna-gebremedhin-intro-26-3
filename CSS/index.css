@@ -83,4 +83,6 @@ nav a:hover {
 #Experience p {
     margin-bottom: 0;
 }
-
+#Skills ul {
+    display: flex;
+}
