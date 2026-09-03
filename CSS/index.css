@@ -84,3 +84,32 @@ nav a:hover {
     margin-bottom: 0;
 }
 
+form[name="leave_message"] {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+}
+
+form[name="leave_message"] input,
+form[name="leave_message"] textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form[name="leave_message"] textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form[name="leave_message"] button {
+    width: 100px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
