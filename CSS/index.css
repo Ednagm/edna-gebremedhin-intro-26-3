@@ -121,3 +121,7 @@ form[name="leave_message"] button {
     }
 }
 
+#Skills ul {
+    display: flex;
+    flex-direction: column;
+}
