@@ -110,6 +110,14 @@ form[name="leave_message"] button {
     font-size: 16px;
     cursor: pointer;
 }
-
-
+#projects ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (max-width: 600px) {
+    #projects ul {
+        flex-direction: column;
+    }
+}
 
