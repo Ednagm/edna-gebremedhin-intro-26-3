@@ -37,6 +37,7 @@ fetch("https://api.github.com/users/Ednagm/repos")
   });
     .then(function(data) {
     let repositories = data;
+    console.log("Lesson 9: Repositories loaded successfully!");
     console.log(repositories);
     
     
