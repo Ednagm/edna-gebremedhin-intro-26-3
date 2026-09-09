@@ -49,7 +49,7 @@ fetch("https://api.github.com/users/Ednagm/repos")
         project.innerText = repositories[i].name;
         projectList.appendChild(project);
 }
-  });
+  })
     .catch(function(error) {
         console.log(error);
         projectSection.innerText = "Sorry, we couldn't load the projects.";
