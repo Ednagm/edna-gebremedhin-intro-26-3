@@ -110,7 +110,7 @@ form[name="leave_message"] button {
     font-size: 16px;
     cursor: pointer;
 }
-#projects ul {
+#Projects ul {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;

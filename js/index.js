@@ -31,6 +31,9 @@ messageForm.addEventListener("submit", function(event) {
     event.target.reset();
 });
 
+let projectSection = document.getElementById("Projects");
+let projectList = projectSection.querySelector("ul");
+
 fetch("https://api.github.com/users/Ednagm/repos")
     .then(function(response) {
     return response.json();
@@ -40,9 +43,6 @@ fetch("https://api.github.com/users/Ednagm/repos")
     console.log("Lesson 9: Repositories loaded successfully!");
     console.log(repositories);
     
-    
-    let projectSection = document.getElementById("Projects");
-    let projectList = projectSection.querySelector("ul");
 
     for (let i = 0; i < repositories.length; i++) {
         let project = document.createElement("li");
