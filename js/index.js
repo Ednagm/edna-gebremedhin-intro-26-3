@@ -31,26 +31,28 @@ messageForm.addEventListener("submit", function(event) {
     event.target.reset();
 });
 
+let projectSection = document.getElementById("Projects");
+let projectList = projectSection.querySelector("ul");
+
 fetch("https://api.github.com/users/Ednagm/repos")
     .then(function(response) {
     return response.json();
-  });
+  })
     .then(function(data) {
     let repositories = data;
+    console.log("Lesson 9: Repositories loaded successfully!");
     console.log(repositories);
     
-    
-    let projectSection = document.getElementById("projects");
-    let projectList = projectSection.querySelector("ul");
 
     for (let i = 0; i < repositories.length; i++) {
         let project = document.createElement("li");
         project.innerText = repositories[i].name;
         projectList.appendChild(project);
 }
-  });
+  })
     .catch(function(error) {
-    console.log(error);
+        console.log(error);
+        projectSection.innerText = "Sorry, we couldn't load the projects.";
   });
 const today = new Date();
 const thisYear = today.getFullYear();
