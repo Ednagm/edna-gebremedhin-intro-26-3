@@ -16,15 +16,28 @@ messageForm.addEventListener("submit", function(event) {
 
     newMessage.innerHTML = `<a href="mailto:${email}">${name}</a>: <span>${message}</span>`;
 
-    const removeButton = document.createElement("button");
-    removeButton.innerText = "remove";
-    removeButton.setAttribute("type", "button");
+    const editButton = document.createElement("button");
+editButton.innerText = "edit";
+editButton.setAttribute("type", "button");
 
-    removeButton.addEventListener("click", function() {
-        const entry = removeButton.parentNode;
-        entry.remove();
-    });
+editButton.addEventListener("click", function() {
+    const newMessageText = prompt("Edit your message:", message);
 
+    if (newMessageText !== null) {
+        newMessage.querySelector("span").innerText = newMessageText;
+    }
+});
+
+const removeButton = document.createElement("button");
+removeButton.innerText = "remove";
+removeButton.setAttribute("type", "button");
+
+removeButton.addEventListener("click", function() {
+    const entry = removeButton.parentNode;
+    entry.remove();
+});
+
+    newMessage.appendChild(editButton);
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
 
